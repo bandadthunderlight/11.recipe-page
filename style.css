@@ -1,0 +1,358 @@
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+  --White: hsl(0, 0%, 100%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+@font-face {
+  font-family: YoungSerif;
+  src: url(./fonts/Young_Serif/YoungSerif-Regular.ttf);
+}
+@font-face {
+  font-family: Outfit;
+  src: url(./fonts/Outfit/Outfit-Regular.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Outfit;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 650px) {
+  .recipe-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--Eggshell);
+  }
+  .recipe-container {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White);
+    width: 100%;
+    border-radius: 1.5rem;
+  }
+  /* ----------------recipe-topContainer---------------- */
+  .recipe-topContainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+        align-items: center; */
+  }
+  .recipe-poster {
+    width: 100%;
+  }
+  .recipe-title {
+    font-family: YoungSerif;
+    font-size: 2rem;
+    color: var(--Dark-Charcoal);
+    padding: 0 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .recipe-subTitle {
+    color: var(--Wenge-Brown);
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+  }
+  /* ----------------prepareTime----------------- */
+
+  .prepareTime-container {
+    color: var(--Wenge-Brown);
+    width: 90%;
+    background-color: var(--Rose-White);
+    padding: 2rem;
+    margin: 0 2rem;
+    border-radius: 1rem;
+  }
+  .prepareTime-title {
+    font-size: larger;
+    color: var(--Dark-Raspberry);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .prepareTime-list {
+  }
+  .prepareTime-listItem {
+    list-style: square;
+    font-weight: 600;
+    margin-left: 1rem;
+    padding: 0.3rem 0 0.3rem 1.5rem;
+  }
+  .prepareTime-listItem > span {
+    font-size: medium;
+    font-weight: 400;
+  }
+  .prepareTime-listItem::marker {
+    color: var(--Dark-Raspberry);
+    font-size: x-small;
+  }
+  /* ---------------ingredients----------------- */
+  .ingredients-container {
+    width: 90%;
+    color: var(--Wenge-Brown);
+    border-bottom: 1px solid hsla(32, 10%, 34%, 0.39);
+  }
+  .ingredients-title {
+    font-family: YoungSerif;
+    font-size: 1.8rem;
+    color: var(--Nutmeg);
+    margin: 1rem 0;
+  }
+  .ingredients-list {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .ingredients-listItem {
+    list-style: square;
+    padding: 0.3rem 0;
+    padding-left: 1.5rem;
+  }
+  .ingredients-listItem::marker {
+    font-size: x-small;
+  }
+  /* ---------------instruction----------------- */
+  .instruction-container {
+    width: 90%;
+    color: var(--Wenge-Brown);
+    border-bottom: 1px solid hsla(32, 10%, 34%, 0.3);
+  }
+  .instruction-title {
+    font-family: YoungSerif;
+    font-size: 1.8rem;
+    color: var(--Nutmeg);
+    margin: 1rem 0;
+  }
+  .instruction-list {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .instruction-listItem {
+    list-style: number;
+    padding: 0.3rem 0;
+    padding-left: 1rem;
+  }
+  .instruction-listItem::marker {
+    font-size: medium;
+    color: var(--Nutmeg);
+    font-weight: 600;
+  }
+  .instruction-listSpan {
+    font-weight: 600;
+  }
+
+  /* ---------------nutrition----------------- */
+
+  .nutrition-container {
+    width: 90%;
+    color: var(--Wenge-Brown);
+    border-bottom: 1px solid hsla(32, 10%, 34%, 0.3);
+  }
+  .nutrition-title {
+    font-family: YoungSerif;
+    font-size: 1.8rem;
+    color: var(--Nutmeg);
+    margin: 1rem 0;
+  }
+  .nutrition-text {
+    margin-bottom: 1rem;
+  }
+  .nutrition-item {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid hsla(32, 10%, 34%, 0.3);
+    padding: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  .nutrition-itemName {
+    width: 50%;
+  }
+  .nutrition-itemValue {
+    color: var(--Nutmeg);
+    width: 50%;
+    font-weight: 700;
+  }
+  .nutrition-container > :last-child {
+    border-bottom: none !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 650px) {
+  .recipe-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--Eggshell);
+  }
+  .recipe-container {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White);
+    width: 45rem;
+    border-radius: 1.5rem;
+    margin: 6rem 0;
+  }
+  /* ----------------recipe-topContainer---------------- */
+  .recipe-topContainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+        align-items: center; */
+    padding: 2.5rem;
+  }
+  .recipe-poster {
+    width: 40rem;
+    border-radius: 1rem;
+  }
+  .recipe-title {
+    font-family: YoungSerif;
+    font-size: 2.5rem;
+    color: var(--Dark-Charcoal);
+    margin: 1.5rem 0;
+  }
+  .recipe-subTitle {
+    color: var(--Wenge-Brown);
+  }
+  /* ----------------prepareTime----------------- */
+
+  .prepareTime-container {
+    color: var(--Wenge-Brown);
+    width: 90%;
+    background-color: var(--Rose-White);
+    padding: 2rem;
+    margin: 0 2rem;
+    border-radius: 1rem;
+  }
+  .prepareTime-title {
+    font-size: larger;
+    color: var(--Dark-Raspberry);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .prepareTime-list {
+  }
+  .prepareTime-listItem {
+    list-style: square;
+    font-weight: 600;
+    margin-left: 1rem;
+    padding: 0.3rem 0 0.3rem 1.5rem;
+  }
+  .prepareTime-listItem > span {
+    font-size: medium;
+    font-weight: 400;
+  }
+  .prepareTime-listItem::marker {
+    color: var(--Dark-Raspberry);
+    font-size: x-small;
+  }
+  /* ---------------ingredients----------------- */
+  .ingredients-container {
+    width: 90%;
+    color: var(--Wenge-Brown);
+    border-bottom: 1px solid hsla(32, 10%, 34%, 0.39);
+  }
+  .ingredients-title {
+    font-family: YoungSerif;
+    font-size: 1.8rem;
+    color: var(--Nutmeg);
+    margin: 1rem 0;
+  }
+  .ingredients-list {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .ingredients-listItem {
+    list-style: square;
+    padding: 0.3rem 0;
+    padding-left: 1.5rem;
+  }
+  .ingredients-listItem::marker {
+    font-size: x-small;
+  }
+  /* ---------------instruction----------------- */
+  .instruction-container {
+    width: 90%;
+    color: var(--Wenge-Brown);
+    border-bottom: 1px solid hsla(32, 10%, 34%, 0.3);
+  }
+  .instruction-title {
+    font-family: YoungSerif;
+    font-size: 1.8rem;
+    color: var(--Nutmeg);
+    margin: 1rem 0;
+  }
+  .instruction-list {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .instruction-listItem {
+    list-style: number;
+    padding: 0.3rem 0;
+    padding-left: 1rem;
+  }
+  .instruction-listItem::marker {
+    font-size: medium;
+    color: var(--Nutmeg);
+    font-weight: 600;
+  }
+  .instruction-listSpan {
+    font-weight: 600;
+  }
+
+  /* ---------------nutrition----------------- */
+
+  .nutrition-container {
+    width: 90%;
+    color: var(--Wenge-Brown);
+    border-bottom: 1px solid hsla(32, 10%, 34%, 0.3);
+  }
+  .nutrition-title {
+    font-family: YoungSerif;
+    font-size: 1.8rem;
+    color: var(--Nutmeg);
+    margin: 1rem 0;
+  }
+  .nutrition-text {
+    margin-bottom: 1rem;
+  }
+  .nutrition-item {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid hsla(32, 10%, 34%, 0.3);
+    padding: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  .nutrition-itemName {
+    width: 50%;
+  }
+  .nutrition-itemValue {
+    color: var(--Nutmeg);
+    width: 50%;
+    font-weight: 700;
+  }
+  .nutrition-container > :last-child {
+    border-bottom: none !important;
+    padding-bottom: 3rem !important;
+  }
+}
